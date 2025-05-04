@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silhouettes of Us</title>
+  <link rel="stylesheet" href="style.css">
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS (scroll animations) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kai_Engel/Idea/Kai_Engel_-_05_-_Promise.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="stars"></div>
+
+  <div class="container" data-aos="fade-up">
+    <h1 data-aos="fade-down">Silhouettes of Us</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      <p data-aos="fade-in">And I will kiss every scar on your body,</p>
+      <p data-aos="fade-in">trace the echoes of your battles with my lips,</p>
+      <p data-aos="fade-in">and rewrite pain into poetry.</p>
+  
+      <p data-aos="fade-in">Let me love you past the ghosts of yesterday,</p>
+      <p data-aos="fade-in">past the shadows that still linger in your gaze.</p>
+  
+      <p data-aos="fade-in">I will hold you in a silence between heartbeats,</p>
+      <p data-aos="fade-in">where the world forgets its cruelty,</p>
+      <p data-aos="fade-in">where only we exist, undone and infinite.</p>
+  
+      <p data-aos="fade-in">And if the night remembers your sorrow,</p>
+      <p data-aos="fade-in">I will unmake the darkness.</p>
+      <p data-aos="fade-in">If the past clings to your skin,</p>
+      <p data-aos="fade-in">I will shatter time itself just to pull you free.</p>
+  
+      <p data-aos="fade-in">You are the storm and the sky,</p>
+      <p data-aos="fade-in">the fire and the calm,</p>
+      <p data-aos="fade-in">and if there is even a fragment of ache left within you,</p>
+      <p data-aos="fade-in">I will love you until it surrenders.</p>
+  
+      <p class = 'ftr' data-aos="fade-in signature">Forever yours ❤️<br>Carrots</p>
+    </div>
+  </div>
+
+  <!-- Soft Background Music -->
+  <audio id="background-music" controls loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
+  
+  <!-- Floating stars and cherry petals -->
+  <canvas id="starCanvas"></canvas>
+  <div id="cherry-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+<!-- Cherry Petals -->
+<script src="cherry.js"></script>
+
+<!-- Shooting Stars -->
+<script src="stars.js"></script>
+
+<!-- Bubbles on Mouse Move -->
+<script src="bubbles.js"></script>
+
+  <script src="script.js"></script>
+  <script src="cherry.js"></script> 
+  <script src="shootingstars.js"></script>
+  <script src="bubbles.js"></script>
+  
+</body>
+</html>

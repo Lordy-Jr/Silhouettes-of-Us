@@ -1,0 +1,259 @@
+/* Apply the font and magical aesthetic */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbeffb 0%, #ffe6e6 50%, #e6f0ff 100%);
+  font-family: 'Great Vibes';
+  color: #4b2e2e;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Stars animation background */
+  .shooting-star {
+    position: absolute;
+    width: 6px;
+    height: 100px;
+    background: linear-gradient(rgb(227, 243, 9), rgba(255, 255, 255, 0));
+    transform: rotate(-45deg);
+    animation: shoot 1s ease-out;
+    z-index: 4;
+  }
+  
+  @keyframes shoot {
+    0% {
+      opacity: 1;
+      transform: translateY(0) rotate(-45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-200px) translateX(200px) rotate(-45deg);
+    }
+  }
+  
+  
+  @keyframes moveStars {
+    from {background-position: 0 0;}
+    to {background-position: 0 10000px;}
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 60px 40px; /* increased padding */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px; /* larger container */
+    width: 80%;
+    margin: 10vh auto;
+    z-index: 1;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.4s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 0 14px 32px rgba(174, 113, 218, 0.3),
+                0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  h1 {
+    font-family: 'Great Vibes';
+    font-size: 5rem; /* bigger title */
+    color: #4a4a4a;
+    margin-bottom: 40px;
+  }
+  
+  p, .poem {
+    font-size: 3rem; /* larger poem lines */
+    line-height: 2;
+    color: #333;
+  }
+  
+  .poem {
+    font-family: 'Great Vibes';
+    color: #fff0f5;
+    text-align: center;
+    animation: fadeIn 2s ease-in forwards;
+  }
+  
+  #starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  #cherry-container {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Music player */
+  audio {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  color: #a742a8;
+}
+  
+  /* Fade-in page */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 24px;
+    }
+    em {
+      font-size: 28px;
+    }
+    .container {
+      padding: 50px;
+    }
+  }
+  /* Petals */
+.petal {
+  position: absolute;
+  top: -40px;
+  width: 25px;
+  height: 25px;
+  background-image: url('https://cdn-icons-png.freepik.com/256/14491/14491202.png?ga=GA1.1.1011131293.1746028376&semt=ais_hybrid');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  animation: fall linear infinite;
+  z-index: 2;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+  
+  .heart {
+    font-size: 0.6em;
+    margin-left: 5px;
+    color: #e25555;
+    text-shadow: 0 0 8px rgba(226, 85, 85, 0.6);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .signature {
+    font-size: 1.5rem;
+    font-family: 'Great Vibes', cursive;
+    text-align: right;
+    margin-top: 3rem;
+  }
+  h1{
+    margin-block-end:0;
+    margin-block-start:0;
+  }
+  .ftr{
+    margin-block-end:0;
+  }
+  .poem {
+    font-family: 'Great Vibes';
+    font-size: 1.8em;
+    line-height: 1.6;
+    color: #fff0f5;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+  }
+  @media (max-width: 600px) {
+    .poem {
+      font-size: 1.4em;
+      padding: 0 1rem;
+    }
+  }
+  /* Bubbles */
+  .bubble {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(252, 17, 56, 0.973);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: bubble-rise 1s ease-out forwards;
+    z-index: 10;
+  }
+  
+  @keyframes bubble-rise {
+    to {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+  }  
+  /* Stars */
+  .shooting-star {
+    position: absolute;
+    width: 15px; /* Bigger star */
+    height: 15px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.9); /* More glow */
+    pointer-events: none;
+    animation: shoot 1.2s ease-out forwards;
+    z-index: 12;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes shoot {
+    to {
+      transform: translate(calc(var(--x)), calc(var(--y)));
+      opacity: 0;
+    }
+  }
+  .shooting-star::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 150, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 150, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+  }
+  
