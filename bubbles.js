@@ -5,9 +5,8 @@ document.addEventListener("mousemove", (e) => {
   // Correct position accounting for scroll
   bubble.style.left = `${e.clientX}px`;
   bubble.style.top = `${e.clientY + window.scrollY}px`;
-
+  
   document.body.appendChild(bubble);
-
   setTimeout(() => {
     bubble.remove();
   }, 1000);

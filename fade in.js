@@ -9,6 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, { threshold: 0.1 });
-
   lines.forEach(line => observer.observe(line));
 });
